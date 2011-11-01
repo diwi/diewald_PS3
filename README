@@ -1,0 +1,35 @@
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+AUTHOR: Thomas Diewald
+
+Date:        01.11.2011
+last edited: 01.11.2011
+
+author:    www.thomasdiewald.com
+library:   http://www.thomasdiewald.com/processing/libraries/dLibs_PS3/
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+
+
+################################################################################
+--------------------------------------------------------------------------------
+PROCESSING/JAVA LIBRARY - diewald_PS3
+--------------------------------------------------------------------------------
+################################################################################
+
+this library is made for using the PS3eye camera in processing / Java.
+its basically a wrapper of the PS3-library by CodeLaboratories.
+
+download driver (need): CL-Eye Platform Driver
+download SDK (optional): CL-Eye Platform SDK
+
+
+ZIP_CONTENT:
+    processing examples
+    reference
+    source-code
+    library: diewald_fluid.jar, CLEyeMulticam.dll
+
+
+
