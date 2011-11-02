@@ -31,6 +31,7 @@ package diewald_PS3;
 
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
+
 import diewald_PS3.constants.COLOR_MODE;
 import diewald_PS3.constants.PS3_PARAM;
 import diewald_PS3.constants.VIDEO_MODE;
@@ -69,6 +70,7 @@ public class PS3 {
   private PS3_Library.Camera camera_;
 
   private ByteBuffer pixel_buffer_;
+
   private int pixels_[];
   
   /**
@@ -209,13 +211,15 @@ public class PS3 {
    * 
    * @param pixels 
    */
-  public final void getFrame(int pixels[]){
-    synchronized (pixels_){
+   synchronized
+   public final void getFrame(int pixels[]){
+//    synchronized (this){
       System.arraycopy(pixels_, 0, pixels, 0, pixels_.length);
-    }
+//    }
   }
 
   
+  synchronized 
   private final boolean updateFrame(int pixels[]){
     if( pixels.length != pixel_buffer_.capacity()/color_mode_.getSize() )
       return false;
@@ -223,7 +227,7 @@ public class PS3 {
     LIBRARY.CLEyeCameraGetFrame(camera_, pixel_buffer_, 2000);
 
     int s = color_mode_.getSize();
-    synchronized (pixels_){
+//    synchronized (this){
       if( s == 4 ){
         int r, g, b, idx;
         for(int i = 0; i < pixels.length; i++){
@@ -242,7 +246,7 @@ public class PS3 {
           pixels[i] = 0xFF000000 | gray<<16 | gray<<8 | gray<<0;
         }
       }
-    }
+//    }
     return true;
   }
 
