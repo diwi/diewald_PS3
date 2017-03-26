@@ -11,11 +11,19 @@ library:   http://www.thomasdiewald.com/processing/libraries/diewald_PS3/
 --------------------------------------------------------------------------------
 
 
+
+
+
+
 UPDATE 26.03.2017
 this library is deprecated and should no longer be used.
 
 To use the Sony PS3Eye USB-Camera in Java/Processing i released a new library:
 https://github.com/diwi/PS3Eye
+
+
+
+
 
 
 
